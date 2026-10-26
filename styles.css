@@ -99,4 +99,60 @@ html:not([lang=en]) h1{font-family:'Nirmala UI','Segoe UI',sans-serif;letter-spa
   .art-forms,.closing{width:min(760px,56%)}
   .arts-list{flex-wrap:wrap;gap:20px}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+/* Stationary poster frame with an independently scrolling, fading center. */
+html,body{height:100%;overflow:hidden}
+body{padding-bottom:0}
+body::after{position:fixed;width:100%;height:100dvh;aspect-ratio:auto}
+.page-scroll{
+  position:fixed;
+  inset:18px 25% 18%;
+  overflow-y:auto;
+  overflow-x:hidden;
+  padding-block:24px 48px;
+  background:var(--paper);
+  mix-blend-mode:darken;
+  scrollbar-width:thin;
+  scrollbar-color:var(--line) transparent;
+  scroll-behavior:smooth;
+  mask-image:linear-gradient(to bottom,transparent,#000 24px,#000 calc(100% - 40px),transparent);
+}
+.page-scroll:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
+.page-scroll .wrap{width:100%;max-width:620px}
+.page-scroll .site-header{flex-direction:column;gap:16px;padding-block:12px 24px}
+.page-scroll .organizers{width:100%;max-width:100%;justify-content:center;gap:12px}
+.page-scroll .aiu,.page-scroll .sandip{width:min(200px,calc((100% - 25px)/2))}
+.page-scroll .logo-divider{flex-shrink:0}
+.page-scroll .hero{grid-template-columns:minmax(0,1fr);padding-block:30px;gap:0}
+.page-scroll .hero-copy{width:100%;max-width:100%;text-align:center}
+.page-scroll .hero-copy>.eyebrow,.page-scroll .hero-actions,.page-scroll .countdown{justify-content:center}
+.page-scroll .festival-wordmark,.page-scroll .description{margin-inline:auto}
+.page-scroll h1{font-size:clamp(34px,3.6vw,52px)}
+.page-scroll .intro{font-size:18px}
+.page-scroll .countdown{width:100%;max-width:340px;margin-inline:auto}
+.page-scroll .countdown-unit{flex:1;min-width:0;padding-inline:6px}
+.page-scroll .countdown-number{min-width:0;font-size:clamp(28px,4vw,38px)}
+.page-scroll .event-details{flex-direction:column;text-align:center;gap:22px}
+.page-scroll .detail-item{flex-direction:column;gap:8px;max-width:100%}
+.page-scroll .venue-detail{border:0;padding:0}
+.page-scroll .coming-soon{margin:0}
+.page-scroll .arts-list{flex-wrap:wrap;gap:12px}
+.page-scroll .arts-list span{font-size:22px}
+.page-scroll .arts-list svg{width:10px;height:10px}
+.page-scroll .site-footer{flex-direction:column;text-align:center}
+@media(max-width:640px){
+  body::before{
+    content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:url('assets/poster-english.jpeg') center / 100% 100% no-repeat;
+    mix-blend-mode:darken;
+    mask-image:linear-gradient(to bottom,#000 60%,transparent 78%),linear-gradient(to right,#000 5%,transparent 10%,transparent 90%,#000 95%);
+    mask-composite:intersect;
+  }
+  body::after{height:auto;aspect-ratio:1131/720}
+  .page-scroll{inset:12px 12% 17%;padding-block:20px 40px}
+  .page-scroll h1,html:not([lang=en]) .page-scroll h1{font-size:clamp(29px,8vw,40px);letter-spacing:-1px}
+  .page-scroll .hero-copy>.eyebrow{font-size:8px;letter-spacing:.3px}
+  .page-scroll .intro{font-size:16px}
+  .page-scroll .detail-value{font-size:20px}
+  .page-scroll .language-nav a{padding-inline:12px}
+}
+@media(prefers-reduced-motion:reduce){html,.page-scroll{scroll-behavior:auto}*,*::before,*::after{transition:none!important}.page-scroll{mask-image:none}}
