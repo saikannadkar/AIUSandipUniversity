@@ -4,7 +4,7 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;background-image:radial-gradient(ellipse at 90% 26%,#f3dfc174,transparent 45%),radial-gradient(ellipse at 0% 60%,#f5ded34d,transparent 40%)}
 a{color:inherit;text-decoration:none}
-/* Frame the lower content with the original dancer, instruments, and vines. */
+/* Dedicated transparent artwork avoids enlarging and fading the poster crop. */
 body{position:relative;isolation:isolate;padding-bottom:min(19.45vw,311px)}
 body::after{
   content:"";
@@ -13,12 +13,9 @@ body::after{
   bottom:0;
   left:50%;
   transform:translateX(-50%);
-  width:min(100%,1600px);
+  width:min(100%,1572px);
   aspect-ratio:1131/720;
-  background:url('assets/poster-english.jpeg') center bottom / 100% auto no-repeat;
-  mix-blend-mode:darken;
-  mask-image:linear-gradient(to bottom,transparent,#000 15%),linear-gradient(to right,#000 20%,transparent 23.5%,transparent 77%,#000 84%),linear-gradient(to top,#000 24%,transparent 30%);
-  mask-composite:intersect,add;
+  background:url('assets/border-artwork.png') center bottom / contain no-repeat;
   pointer-events:none;
 }
 button,a{-webkit-tap-highlight-color:transparent}
