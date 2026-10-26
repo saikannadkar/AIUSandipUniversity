@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//KalaKumbh//Youth Festival 2027//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:kalakumbh-20270203@sandipuniversity.edu.in
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270203
+DTEND;VALUE=DATE:20270208
+SUMMARY:KalaKumbh - AIU Youth Festival 2027
+LOCATION:Sandip University\, Nashik\, Maharashtra\, India
+DESCRIPTION:AIU 40th Inter-University South-West Zone Youth Festival.
+URL:https://www.sandipuniversity.edu.in/
+END:VEVENT
+END:VCALENDAR
