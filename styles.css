@@ -28,7 +28,7 @@ svg{width:22px;height:22px;flex-shrink:0}
 .topline{height:5px;background:linear-gradient(90deg,var(--red) 0 28%,#dca039 28% 47%,#713275 47% 66%,#14738b 66% 80%,var(--ink) 80%)}
 .skip-link{position:fixed;left:20px;top:-100px;background:var(--ink);color:white;padding:12px;z-index:10}.skip-link:focus{top:12px}
 .site-header{display:flex;align-items:center;justify-content:space-between;gap:28px;min-height:119px;border-bottom:1px solid var(--line)}
-.organizers{display:flex;align-items:center;gap:21px;max-width:70%}
+.organizers{display:flex;align-items:center;gap:21px;max-width:100%}
 .logo-crop{display:block;flex-shrink:0}
 .logo-crop img,.festival-wordmark img{width:100%;height:100%;object-fit:contain}
 .aiu{width:230px;aspect-ratio:385/101}
