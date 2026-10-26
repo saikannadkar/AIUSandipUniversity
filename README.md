@@ -17,7 +17,7 @@ For local HTTP preview: `python -m http.server 8080 --bind 127.0.0.1`, then open
 
 ## Event and countdown
 
-Event dates: 3–7 February 2027. Venue: Sandip University, Nashik. Event details are taken from the supplied posters. Only English and Kannada artwork was supplied; the Hindi page uses a text wordmark and the English invitation. Hindi was selected by the requester.
+Event dates: 3–7 February 2027. Venue: Sandip University, Nashik. Event details are taken from the supplied posters. The Hindi page uses the supplied Devanagari artwork for its wordmark and invitation.
 
 The countdown targets `2027-02-03T00:00:00+05:30` (midnight India Standard Time). An opening time was not supplied; midnight is a date-based countdown, not an announced ceremony time. Change `start` in `script.js` when a confirmed time is available. The timer uses the visitor's device clock, clamps to zero, and changes its message during the festival and after 7 February. The calendar download is an all-day event covering 3–7 February.
 
