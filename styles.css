@@ -99,4 +99,30 @@ html:not([lang=en]) h1{font-family:'Nirmala UI','Segoe UI',sans-serif;letter-spa
   .art-forms,.closing{width:min(760px,56%)}
   .arts-list{flex-wrap:wrap;gap:20px}
 }
+/* Phone layout: readable copy, comfortable tap targets, and clear artwork. */
+@media(max-width:640px){
+  .site-header{gap:14px;padding-block:18px}
+  .language-nav a{display:flex;align-items:center;justify-content:center;min-height:44px;padding:8px 16px}
+  .hero{padding-top:28px;gap:36px}
+  h1{font-size:clamp(36px,9.5vw,52px)}
+  .intro,html:not([lang=en]) .intro{font-size:18px}
+  .description{font-size:14px;line-height:1.75}
+  .countdown-heading{font-size:10px;letter-spacing:1px}
+  .countdown-label{font-size:11px}
+  .hero-actions{flex-direction:column;gap:8px;margin-top:24px}
+  .hero-actions .button,.hero-actions .text-link{min-height:44px;font-size:13px}
+  .hero-actions .button{width:100%;max-width:300px}
+  .hero-art,html:not([lang=en]) .hero-art{width:82%;max-width:320px}
+  .poster-caption{margin-top:48px;font-size:9px;letter-spacing:.5px;text-align:center;line-height:1.6}
+  .edition-seal{bottom:55px;right:-18px}
+  .eyebrow,.art-forms>.eyebrow{font-size:10px;letter-spacing:1px}
+  .address{font-size:12px;max-width:300px}
+  .arts-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px;max-width:340px;margin-inline:auto}
+  .arts-list svg{display:none}
+  .arts-list span{white-space:normal}
+  .arts-list span:last-child{grid-column:1 / -1}
+  .closing p{font-size:13px}
+  .site-footer p{font-size:10px;letter-spacing:.5px}
+  .site-footer a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;font-size:12px;line-height:1.6}
+}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
